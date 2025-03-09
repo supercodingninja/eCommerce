@@ -1,0 +1,130 @@
+/*================= Universal Styles =================*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* We want all images to be 100% of their parent (remamber that). */
+img {
+    width: 100%;
+    /* Makes this a lot smaller (suitable for laptops). */
+    height: 100%;
+    max-height: 50vh;
+}
+/*========== Nav Styles ==========*/
+nav {
+    height: 80px;
+    display: flex;
+}
+
+.nav__container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+.logo {
+    width: 160px;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #6030b1;
+}
+
+.nav__link {
+    margin-left: 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #6030b1;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--primary {
+    border: 2px solid #6030b1;
+    border-radius: 4px;
+}
+
+/*========== Landing Styles ==========*/
+#landing {
+    background-color:  rgba(115, 66, 214, 0.1);
+  }
+
+header {
+    height: calc(100vh - 80px);
+}
+
+.header__container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__img--wrapper {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 56px;
+    color: #6030b1;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.btn {
+    background-color: #6030b1;
+    color: white;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+}
+
+.myPurple {
+    color: #6030b1;
+}
