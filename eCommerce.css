@@ -8,6 +8,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+a {
+    cursor: pointer;
+}
+
 /* We want all images to be 100% of their parent (remamber that). */
 img {
     width: 100%;
@@ -39,6 +43,7 @@ li {
 
 .logo {
     width: 160px;
+    padding-top: 0.3em;
 }
 
 .nav__link {
