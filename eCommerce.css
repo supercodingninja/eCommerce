@@ -8,18 +8,17 @@
     font-family: "Roboto", sans-serif;
 }
 
+.emph {
+    background: linear-gradient(to top, purple, PaleGoldenRod);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 a {
     cursor: pointer;
 }
 
-/* We want all images to be 100% of their parent (remamber that). */
-img {
-    width: 100%;
-    /* Makes this a lot smaller (suitable for laptops). */
-    height: 100%;
-    max-height: 50vh;
-}
-/*========== Nav Styles ==========*/
+/*==================== Nav Styles ====================*/
 nav {
     height: 5rem;
     display: flex;
@@ -27,12 +26,13 @@ nav {
 
 .nav__container {
     width: 100%;
-    max-width: 75em;
+    max-width: 82em;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 }
 
+/*==================== Landing Page Styles ====================*/
 ul {
     display: flex;
 }
@@ -42,8 +42,8 @@ li {
 }
 
 .logo {
-    width: 10em;
-    padding-top: 0.3em;
+    width: 12em;
+    padding-top: 0.43em;
 }
 
 .nav__link {
@@ -71,7 +71,6 @@ li {
     border-radius: .25em;
 }
 
-/*========== Landing Styles ==========*/
 #landing {
     background-color:  rgba(115, 66, 214, 0.1);
   }
@@ -81,6 +80,7 @@ header {
 }
 
 .header__container {
+    padding-top: 2em;
     width: 100%;
     max-width: 45em;
     margin: 0 auto;
@@ -124,12 +124,114 @@ button:active {
 .btn {
     background-color: #6030b1;
     color: white;
-    padding: 0.063em 1.5em;
-    font-size: 1.25em;
+    padding: 0.065em 0.29em;
+    font-size: 1.5em;
     border-radius: 0.25em;
     border: none;
 }
 
 .myPurple {
     color: #6030b1;
+}
+
+/* Landing Page Image Styles */
+.sea {
+    width: 128em;
+    height: 41.889em;
+    max-height: 100vh;
+    /* Positions image behind .main image on landing page. */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    left: -35em;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* We want all images to be 100% of their parent (REMEMBER that...however, I am experimenting). */
+.main {
+    width: 50%;
+
+    /* Makes this a lot smaller (suitable for laptops). */
+    height: 100%;
+    max-height: 12.75vh;
+
+    /* Position image on top of .sea image. */
+    position: absolute;
+    bottom: 0;
+    right: 27em;
+}
+
+/* Thought Bubble */
+.thought-bubble {
+    width: 5%;
+
+    /* Makes this a lot smaller (suitable for laptops). */
+    height: 100%;
+    max-height: 5vh;
+
+    /* Position image on top of .sea image. */
+    position: absolute;
+    bottom: 7.75em;
+    right: 49.575em;
+}
+
+/* AWESOME ANIMATION: Make the plane fly. Ref. https://cargo2support.cargo.site/Make-an-Image-Fly-Across-the-Screen Adjusting this to my specifics was farely easy to understand; but it took a few minutes to get it right, consider the image I chose to use. */
+.sw {
+	pointer-events: none;
+}
+
+.sw > * {
+/* Adjust animation duration to change the element’s speed */
+        animation: fly 60s linear infinite;
+        pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: ±2147483647999;
+}
+
+ /* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-15%) translateY(50vh) rotateZ(0deg);
+	}
+
+    to
+
+	15% {
+		transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
 }
