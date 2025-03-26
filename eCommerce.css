@@ -21,13 +21,13 @@ img {
 }
 /*========== Nav Styles ==========*/
 nav {
-    height: 80px;
+    height: 5rem;
     display: flex;
 }
 
 .nav__container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 75em;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -42,24 +42,24 @@ li {
 }
 
 .logo {
-    width: 160px;
+    width: 10em;
     padding-top: 0.3em;
 }
 
 .nav__link {
-    margin-left: 16px;
+    margin-left: 1em;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #6030b1;
 }
 
 .nav__link {
-    margin-left: 16px;
+    margin-left: 1em;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25em;
     color: #6030b1;
     font-weight: bold;
-    padding: 8px;
+    padding: 0.5em;
 }
 
 .nav__link:hover {
@@ -67,8 +67,8 @@ li {
 }
 
 .nav__link--primary {
-    border: 2px solid #6030b1;
-    border-radius: 4px;
+    border: 0.125em solid #6030b1;
+    border-radius: .25em;
 }
 
 /*========== Landing Styles ==========*/
@@ -77,12 +77,12 @@ li {
   }
 
 header {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 5em);
 }
 
 .header__container {
     width: 100%;
-    max-width: 720px;
+    max-width: 45em;
     margin: 0 auto;
     height: 100%;
     display: flex;
@@ -97,19 +97,19 @@ header {
 }
 
 .header__img--wrapper {
-    padding: 20px;
+    padding: 1.25em;
 }
 
 h1 {
-    font-size: 56px;
+    font-size: 3.5rem;
     color: #6030b1;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
     text-align: center;
 }
 
 h2 {
-    font-size: 28px;
-    margin-bottom: 32px;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -118,15 +118,15 @@ button {
 }
 
 button:active {
-    transform: translateY(1px);
+    transform: translateY(0.063em);
 }
 
 .btn {
     background-color: #6030b1;
     color: white;
-    padding: 12px 24px;
-    font-size: 20px;
-    border-radius: 4px;
+    padding: 0.063em 1.5em;
+    font-size: 1.25em;
+    border-radius: 0.25em;
     border: none;
 }
 
