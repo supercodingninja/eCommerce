@@ -136,9 +136,10 @@ button:active {
 
 /* Landing Page Image Styles */
 .sea {
-    width: 128em;
+    width: 100vw;
     height: 41.889em;
     max-height: 100vh;
+
     /* Positions image behind .main image on landing page. */
     display: flex;
     justify-content: center;
@@ -185,13 +186,29 @@ button:active {
 
 .sw > * {
 /* Adjust animation duration to change the element’s speed */
-        animation: fly 60s linear infinite;
-        pointer-events: none !important;
+    animation: fly 32s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
 	top: 0;
 	left: 0;
-	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
 	position: fixed;
-	animation-delay: 1s;
+	z-index: ±2147483647999;
+}
+
+.pid {
+	pointer-events: none;
+}
+
+.pid > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: fly2 32s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
 	z-index: ±2147483647999;
 }
 
@@ -199,6 +216,28 @@ button:active {
     and end its trajectory across the screen. Each rule
     represents a path the element follows across the screen. */
 @keyframes fly {
+
+	98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+}
+
+/* STUDY!!!! https://stackoverflow.com/questions/51580920/use-different-keyframes-based-on-parent-element-class */
+
+/* Explore this idea https://codepen.io/_fbrz/pen/eYrNeW */
+
+@keyframes fly2 {
 
 	98.001%, 0% {
                 display: block;
@@ -235,7 +274,3 @@ button:active {
 		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
 	}
 }
-
-/* STUDY!!!! https://stackoverflow.com/questions/51580920/use-different-keyframes-based-on-parent-element-class */
-
-/* Explore this idea https://codepen.io/_fbrz/pen/eYrNeW */
