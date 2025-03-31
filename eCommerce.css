@@ -163,59 +163,52 @@ button:active {
     position: absolute;
     bottom: 0;
     right: 27em;
+	z-index: ±2147483647999;
 }
 
 /* Thought Bubble */
 .thought-bubble {
-    width: 5%;
+    width: 50%;
 
     /* Makes this a lot smaller (suitable for laptops). */
     height: 100%;
-    max-height: 5vh;
+    max-height: 15vh;
 
     /* Position image on top of .sea image. */
     position: absolute;
-    bottom: 7.75em;
-    right: 49.575em;
+    bottom: 6.8em;
+    right: 21.2em;
+	z-index: ±2147483647987;
 }
 
-/* AWESOME ANIMATION: Make the plane fly. Ref. https://cargo2support.cargo.site/Make-an-Image-Fly-Across-the-Screen Adjusting this to my specifics was farely easy to understand; but it took a few minutes to get it right, consider the image I chose to use. */
+.reading {
+    z-index: ±21474836479999;
+    font-weight: 900 !important;
+    
+    /* Position image on top of .sea image. */
+    position: absolute;
+    bottom: 12em;
+    right: 25em;
+	z-index: ±2147483647995;
+}
+
+/* AWESOME ANIMATION: Make the plane fly. Ref. https://cargo2support.cargo.site/Make-an-Image-Fly-Across-the-Screen Adjusting this to my specifics was farely easy to understand; but it took a few minutes to get it right, consider the images I chose to use. */
 .sw {
 	pointer-events: none;
 }
 
 .sw > * {
 /* Adjust animation duration to change the element’s speed */
-    animation: fly 32s;
-    animation-iteration-count: 1;
+    animation: sw__take-off 29s 1;
+    transform: translateX(-5%) translateY(-120%) rotateZ(0);
     pointer-events: none !important;
 	top: 0;
 	left: 0;
-	transform: translateX(-5%) translateY(-120%) rotateZ(0);
 	position: fixed;
-	z-index: ±2147483647999;
+	z-index: ±2147483647997;
 }
 
-.pid {
-	pointer-events: none;
-}
-
-.pid > * {
-/* Adjust animation duration to change the element’s speed */
-    animation: fly2 32s;
-    animation-iteration-count: 1;
-    pointer-events: none !important;
-	top: 0;
-	left: 0;
-	transform: translateX(-5%) translateY(-120%) rotateZ(0);
-	position: fixed;
-	z-index: ±2147483647999;
-}
-
- /* Keyframe values control where the element will begin
-    and end its trajectory across the screen. Each rule
-    represents a path the element follows across the screen. */
-@keyframes fly {
+@keyframes sw__take-off {
 
 	98.001%, 0% {
         display: block;
@@ -228,49 +221,223 @@ button:active {
         transform: translateX(100vw) translateY(50%) rotateZ(0deg);
     }
 
-    15.001%, 18% {
-        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    15.001% {
+        transform: translateX(1000vw) translateY(100%) rotateZ(0deg)
     }
 }
 
-/* STUDY!!!! https://stackoverflow.com/questions/51580920/use-different-keyframes-based-on-parent-element-class */
+.delta {
+	pointer-events: none;
+}
 
-/* Explore this idea https://codepen.io/_fbrz/pen/eYrNeW */
+.delta > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: delta__take-off 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	z-index: ±2147483647997;
+}
 
-@keyframes fly2 {
+@keyframes delta__take-off {
 
-	98.001%, 0% {
-                display: block;
-		transform: translateX(-15%) translateY(50vh) rotateZ(0deg);
-	}
+	from
+
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
 
     to
 
-	15% {
-		transform: translateX(100vw) translateY(50%) rotateZ(0deg);
-	}
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
 
-	15.001%, 18% {
-		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
-	}
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
+}
 
-	40% {
-		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
-	}
+.hit {
+	pointer-events: none;
+}
 
-	40.001%, 43% {
-		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
-	}
+.hit > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: delta__take-off 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	z-index: ±2147483647997;
+}
 
-	65% {
-		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
-	}
+@keyframes hit__going--down {
 
-	65.001%, 68% {
-		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
-	}
+	from
 
-	95% {
-		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
-	}
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
+}
+
+.UFO {
+	pointer-events: none;
+}
+
+.UFO > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: UFO__appears--and-evades 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	z-index: ±2147483647997;
+}
+
+@keyframes UFO__appears--and-evades {
+
+	from
+
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
+}
+
+.af {
+    pointer-events: none;
+}
+
+.af > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: af_rescues 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    transform: translateX(-5%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    z-index: ±2147483647997;
+}
+
+@keyframes af_rescues {
+
+	from
+
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
+}
+
+.UFO__lands {
+	pointer-events: none;
+}
+
+.UFO__lands > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: delta__take-off 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	z-index: ±2147483647997;
+}
+
+@keyframes UFO__lands--on--Space-Needle {
+
+	from
+
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
+}
+
+.cobra {
+	pointer-events: none;
+}
+
+.cobra > * {
+/* Adjust animation duration to change the element’s speed */
+    animation: cobra--searches 32s, 1s;
+    animation-iteration-count: 1;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-5%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	z-index: ±2147483647997;
+}
+
+@keyframes cobra--searches {
+
+    from
+
+    98.001%, 0% {
+        display: block;
+        transform: translateX(-99%) translateY(50vh) rotateZ(0deg);
+    }
+
+    to
+
+    15% {
+        transform: translateX(100vw) translateY(50%) rotateZ(0deg);
+    }
+
+    15.001%, 18% {
+        transform: translateX(100vw) translateY(100%) rotateZ(0deg)
+    }
 }
